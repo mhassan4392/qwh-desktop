@@ -1,0 +1,24 @@
+.nav-links {
+  .nav-link {
+    &-active {
+      &::before {
+        content: "";
+        background-image: url("/src/assets/images/navbar_navlink_before.webp");
+        @apply w-10 h-1.5 bg-contain bg-no-repeat bg-center absolute bottom-0;
+      }
+      @apply text-primary;
+
+      .nav-link-icon {
+        @apply rotate-180 text-primary;
+      }
+    }
+    .nav-link-icon {
+      @apply transform  transition-transform duration-500;
+    }
+    &:hover {
+      .nav-link-icon {
+        @apply rotate-180 text-primary;
+      }
+    }
+  }
+}
