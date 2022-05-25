@@ -1,0 +1,43 @@
+.showcase-slider:hover .slick-arrow {
+  @apply !block;
+}
+
+.showcase-slider .slick-arrow {
+  @apply hover:!text-white !bg-white !text-primary !text-lg !font-bold !px-2 !w-10 !h-20 hover:!bg-primary !transition-all !duration-300 !hidden;
+}
+
+.showcase-slider .slick-prev {
+  @apply !rounded-r-lg !-ml-0 !left-0 z-10;
+}
+
+.showcase-slider .slick-next {
+  @apply !rounded-l-lg !-mr-0 !right-0;
+}
+
+.showcase-slider .slick-dots {
+  bottom: 20px;
+  border-radius: 10px;
+}
+
+.showcase-slider .slick-dots li {
+  margin: 0 20px !important;
+}
+
+.showcase-slider .slick-dots li.slick-active button::before {
+  background-image: url("/src/assets/images/slider_indicator_hover.webp");
+}
+
+.showcase-slider .slick-dots li:hover button::before {
+  background-image: url("/src/assets/images/slider_indicator_hover.webp");
+}
+
+.showcase-slider .slick-dots li button::before {
+  content: "";
+  opacity: 1 !important;
+  width: 20px;
+  height: 20px;
+  background-image: url("/src/assets/images/slider_indicator.webp");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}

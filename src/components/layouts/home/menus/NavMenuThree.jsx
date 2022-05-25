@@ -35,11 +35,11 @@ const NavMenuThree = () => {
       className="container mx-auto overflow-hidden h-full"
     >
       <div className="flex items-center justify-between h-full">
-        <div className="w-full flex space-x-5">
+        <div className="w-full flex space-x-5 overflow-hidden h-full">
           {boxes.map((box, i) => (
             <div
               key={i}
-              className="flex flex-col basis-1/4 space-y-3 items-center justify-center"
+              className="flex flex-col overflow-hidden basis-1/4 space-y-3 items-center justify-center cursor-pointer hover:bg-lighter"
             >
               <img src={box.sideImage} className="w-44" alt="" />
               <img src={box.mainImage} className="max-h-[200px]" alt="" />

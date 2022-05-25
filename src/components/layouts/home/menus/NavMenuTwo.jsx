@@ -38,7 +38,7 @@ const NavMenuTwo = () => {
           {boxes.map((box, i) => (
             <div
               key={i}
-              className="flex items-center justify-center space-x-2 cursor-pointer hover:bg-light-bg"
+              className="flex items-center justify-center space-x-2 cursor-pointer hover:bg-lighter"
             >
               <div>
                 <img src={box.mainImage} className="w-full" alt="" />

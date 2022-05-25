@@ -18,17 +18,17 @@ const HomeNavbar = () => {
   const [nav, setNav] = useState(0);
   const links = [
     { title: "首页", to: "/", noNavMenu: true },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login" },
-    { title: "首页", to: "/login", noNavMenu: true },
+    { title: "体育", to: "/login" },
+    { title: "真人", to: "/login" },
+    { title: "棋牌", to: "/login" },
+    { title: "电竞", to: "/login" },
+    { title: "彩票", to: "/login" },
+    { title: "电子", to: "/login" },
+    { title: "优惠", to: "/login" },
+    { title: "赞助", to: "/login" },
+    { title: "合营", to: "/login" },
+    { title: "APP下载", to: "/login" },
+    { title: "资讯", to: "/login", noNavMenu: true },
   ];
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,7 +39,7 @@ const HomeNavbar = () => {
 
   return (
     <div>
-      <div className="fixed flex flex-col h-28 left-0 top-0 right-0 shadow-lg overflow-hidden z-10">
+      <div className="fixed flex flex-col h-28 left-0 top-0 right-0 shadow-lg overflow-hidden z-20">
         <div>
           <div className="bg-gray-800 text-light text-sm h-8">
             <div className="container flex items-center justify-end h-full mx-auto">
@@ -105,7 +105,7 @@ const HomeNavbar = () => {
             initial={{ y: "-100%" }}
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
-            className="fixed left-0 right-0 z-0 bg-common-bg h-[300px] overflow-hidden"
+            className="fixed left-0 right-0 z-10 bg-common-bg h-[300px] overflow-hidden"
           >
             {nav % 2 != 0 && <NavMenuTwo />}
             {nav % 2 == 0 && <NavMenuThree />}

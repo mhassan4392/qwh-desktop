@@ -1,0 +1,28 @@
+.footer-top-logos .logo .top-logo {
+  @apply hidden;
+}
+
+.footer-top-logos .logo:hover .top-logo {
+  @apply block;
+}
+
+.footer-top-logos .logo:hover .top-logo-tr {
+  @apply hidden;
+}
+
+.footer-bottom-logos .logo .bottom-logo {
+  @apply hidden;
+}
+
+.footer-bottom-logos .logo:hover .bottom-logo {
+  @apply block;
+}
+
+.footer-bottom-logos .logo:hover .bottom-logo-tr {
+  @apply hidden;
+}
+
+.footer-top-logos .logo,
+.footer-bottom-logos .logo {
+  @apply cursor-pointer;
+}
