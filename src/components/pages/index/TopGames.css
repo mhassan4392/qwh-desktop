@@ -1,0 +1,31 @@
+.topgames-slider .slick-current {
+  @apply scale-y-125 scale-x-125 !transition-all duration-500;
+}
+
+.topgames-slider .slick-current .slider-bg {
+  @apply !opacity-100;
+}
+
+.topgames-slider .slick-list {
+  @apply !overflow-visible;
+}
+
+.topgames-slider .slick-current .image-container {
+  @apply !overflow-visible z-20 !opacity-100;
+}
+
+.topgames-slider .slick-current .man-image {
+  @apply scale-150;
+}
+
+.topgames-slider .slick-slide div {
+  @apply !flex !items-center !justify-center;
+}
+
+.topgames-slider .slick-arrow {
+  @apply h-[120px] w-[120px] z-10;
+}
+
+.topgames-slider .slick-prev {
+  /* @apply !left-0; */
+}

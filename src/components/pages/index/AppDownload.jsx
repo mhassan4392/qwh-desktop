@@ -1,5 +1,7 @@
 import SectionHeader from "@/components/pages/index/SectionHeader";
 
+import home_download_title from "@/assets/images/home_download_title.webp";
+
 import home_download_h5 from "@/assets/images/home_download_h5.webp";
 import home_download_1 from "@/assets/images/home_download_1.webp";
 import home_download_2 from "@/assets/images/home_download_2.webp";
@@ -16,7 +18,11 @@ const AppDownload = () => {
     <div className="my-8">
       <div className="container mx-auto">
         <div className="mb-10">
-          <SectionHeader />
+          <SectionHeader
+            title="APP下载"
+            subtitle="独家原生APP支持全部移动端"
+            logo={home_download_title}
+          />
         </div>
 
         <div className="flex items-center justify-between my-5">

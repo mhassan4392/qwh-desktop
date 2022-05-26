@@ -1,5 +1,7 @@
 import SectionHeader from "@/components/pages/index/SectionHeader";
 
+import quality_service_title from "@/assets/images/quality_service_title.webp";
+
 import quality_service_round_bg from "@/assets/images/quality_service_round_bg.webp";
 import quality_service_money_icon from "@/assets/images/quality_service_money_icon.webp";
 import quality_service_live_icon from "@/assets/images/quality_service_live_icon.webp";
@@ -69,7 +71,11 @@ const QualityServices = () => {
     <div className="my-8">
       <div className="container mx-auto">
         <div className="mb-10">
-          <SectionHeader />
+          <SectionHeader
+            logo={quality_service_title}
+            title="优质服务"
+            subtitle="我们全心全意为您提供最优质的服务"
+          />
         </div>
 
         <div>
