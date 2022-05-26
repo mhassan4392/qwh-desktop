@@ -10,8 +10,8 @@ const Index = () => {
       <ShowcaseSlider />
       <Banner />
       <AppDownload />
-      <QualityServices />
       <TopGames />
+      <QualityServices />
     </div>
   );
 };

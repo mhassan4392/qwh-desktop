@@ -14,6 +14,10 @@
   @apply !overflow-visible z-20 !opacity-100;
 }
 
+.topgames-slider .slick-current .image-container img {
+  @apply !mt-10;
+}
+
 .topgames-slider .slick-current .man-image {
   @apply scale-150;
 }

@@ -110,15 +110,14 @@ const TopGames = () => {
   };
   return (
     <div className="my-8">
-      {selectedIndex}
       <div
-        className="container mx-auto bg-no-repeat bg-bottom bg-contain pb-28 overflow-hidden relative"
+        className="container mx-auto bg-no-repeat bg-bottom bg-contain pb-20 overflow-hidden relative"
         style={{
           backgroundImage: `url(${topgames_bg})`,
         }}
       >
         {/* slide button */}
-        <div className="absolute bottom-20 z-20 left-0 right-0 flex items-center justify-center">
+        <div className="absolute bottom-24 z-20 left-0 right-0 flex items-center justify-center">
           {slides[selectedIndex].buttons.map((button, i) => (
             <AnimatePresence>
               <motion.div
@@ -150,7 +149,7 @@ const TopGames = () => {
           <div className="absolute inset-0 flex items-center justify-between px-[5px]">
             <img
               src={topgames_btn_bg}
-              className="w-[150px] h-14 transition-all duration-500"
+              className="w-[150px] h-14 transition-all duration-300"
               alt=""
               style={{ transform: `translateX(${150 * selectedIndex + "px"})` }}
             />
@@ -184,7 +183,7 @@ const TopGames = () => {
               <div key={i} className="flex items-center justify-center">
                 <div className=" relative w-2/3">
                   <div className="absolute inset-0">
-                    <div className="w-[98%] overflow-hidden h-[96%] rounded-[37px] image-container opacity-75">
+                    <div className="w-[98%] overflow-hidden h-[96%] rounded-[30px] image-container opacity-75">
                       <img
                         src={slide.image}
                         className="scale-[2] mt-20"
