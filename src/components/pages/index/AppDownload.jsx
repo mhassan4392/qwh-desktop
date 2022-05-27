@@ -16,7 +16,7 @@ import home_download_9 from "@/assets/images/home_download_9.webp";
 const AppDownload = () => {
   return (
     <div className="my-8">
-      <div className="container mx-auto">
+      <div className="contain mx-auto">
         <div className="mb-10">
           <SectionHeader
             title="APP下载"
@@ -42,7 +42,7 @@ const AppDownload = () => {
 
             <img
               src={home_download_3}
-              className="w-16 absolute top-[450px] animate-bounce -right-20 z-10"
+              className="w-16 absolute top-[360px] animate-bounce -right-[100px] z-10"
               alt=""
             />
 
@@ -78,13 +78,10 @@ const AppDownload = () => {
                     <img src={home_download_h5} className="w-full" alt="" />
                     <div className="text-xs">无需下载直接访问</div>
                     <hr className="my-2 bg-light shadow-lg" />
-                    <div className="text-[10px] text-light">
+                    <div className="text-[9px] text-light">
                       手机输入网址即可访问
                     </div>
-                    <p
-                      href="#"
-                      className="text-[10px] break-words leading-none text-primary mt-2"
-                    >
+                    <p className="text-[10px] break-words leading-none text-primary mt-2">
                       {" "}
                       https://www.qwhvip51.com:35560
                     </p>
@@ -99,19 +96,19 @@ const AppDownload = () => {
             {/* floating images */}
             <img
               src={home_download_4}
-              className="w-20 absolute top-[450px] animate-bounce right-8 z-10"
+              className="w-20 absolute top-[335px] animate-bounce right-0 z-10"
               alt=""
             />
 
             <img
               src={home_download_5}
-              className="w-16 absolute top-[540px] animate-bounce right-[300px] z-10"
+              className="w-16 absolute top-[410px] animate-bounce right-[220px] z-10"
               alt=""
             />
 
             <img
               src={home_download_6}
-              className="w-16 absolute top-[130px] animate-bounce right-8 z-10"
+              className="w-16 absolute top-[95px] animate-bounce right-2 z-10"
               alt=""
             />
 

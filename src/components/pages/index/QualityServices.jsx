@@ -69,7 +69,7 @@ const qualities = [
 const QualityServices = () => {
   return (
     <div className="my-8">
-      <div className="container mx-auto">
+      <div className="contain mx-auto">
         <div className="mb-10">
           <SectionHeader
             logo={quality_service_title}
@@ -84,7 +84,7 @@ const QualityServices = () => {
               <div className="flex flex-col items-center space-y-3">
                 <div key={i} className="relative">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-[122px] mb-1 transform rotate-180">
+                    <div className="w-[122px] mb-[7px] transform rotate-180">
                       <CircularProgressbar
                         styles={{
                           path: {

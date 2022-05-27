@@ -1,6 +1,6 @@
 .banner-content {
   overflow: hidden;
-  animation: banner-content 80s linear infinite;
+  animation: banner-content 80s linear 1s infinite;
 }
 
 .banner-content:hover {

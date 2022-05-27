@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply w-[1200px];
+.contain {
+  @apply !w-[1200px] sm:!w-[1200px] md:!w-[1200px] lg:!w-[1200px];
+}
+
+.input-control {
+  @apply flex items-center relative;
+}
+
+.input-control input {
+  @apply bg-white bg-opacity-40 rounded-full border-0 w-full focus:ring-0 px-12 placeholder:text-sm placeholder:text-white placeholder:focus:text-light h-12;
+}
+
+.input-control .right-element {
+  @apply absolute right-0 mr-3 text-white text-xl cursor-pointer;
+}
+
+.input-control .left-element {
+  @apply bg-white bg-opacity-40 text-white rounded-full p-1 absolute left-0 ml-3 text-3xl shadow;
+}
+
+.error-element {
+  @apply text-primary text-xs pl-3 mt-0.5;
 }

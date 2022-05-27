@@ -31,7 +31,7 @@ const NavMenuTwo = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 100 }}
-      className="container mx-auto overflow-hidden h-full"
+      className="contain mx-auto overflow-hidden h-full"
     >
       <div className="flex items-center justify-between">
         <div className="basis-3/4 flex space-x-5">

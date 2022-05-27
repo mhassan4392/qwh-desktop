@@ -82,7 +82,7 @@ const links = ["新手帮助", "竞猜责任", "隐私保护", "规则条款", "
 const Footer = () => {
   return (
     <div className="bg-gradient-to-b from-dark to-dark-light pt-5 pb-2 text-[#828391]">
-      <div className="container mx-auto">
+      <div className="contain mx-auto">
         <div className="flex items-center justify-center footer-top-logos">
           {top_logos.map((logo, i) => (
             <div className="logo">

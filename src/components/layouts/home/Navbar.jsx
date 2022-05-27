@@ -39,17 +39,17 @@ const HomeNavbar = () => {
 
   return (
     <div>
-      <div className="fixed flex flex-col h-28 left-0 top-0 right-0 shadow-lg overflow-hidden z-20">
+      <div className="fixed flex flex-col h-28 left-0 top-0 right-0 shadow-lg overflow-hidden z-30">
         <div>
           <div className="bg-gray-800 text-light text-sm h-8">
-            <div className="container flex items-center justify-end h-full mx-auto">
+            <div className="contain flex items-center justify-end h-full mx-auto">
               <div>GMT+8 {date}</div>
             </div>
           </div>
         </div>
 
         <div className="bg-white relative">
-          <div className="container h-20 mx-auto">
+          <div className="contain h-20 mx-auto">
             <div className="flex items-center justify-between h-full">
               <div className="flex items-center space-x-4 h-full">
                 <img src={nav_logo} className="w-36" alt="" />
@@ -88,7 +88,7 @@ const HomeNavbar = () => {
                 {/* link menu */}
               </div>
 
-              <Link to="/profile" className="flex items-center space-x-2">
+              <Link to="/auth/login" className="flex items-center space-x-2">
                 <img src={nav_profile} className="w-10" alt="" />
                 <span className="text-sm">登录 / 注册</span>
               </Link>

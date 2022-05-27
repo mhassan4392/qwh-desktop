@@ -38,6 +38,7 @@ import topgames_btn_bg from "@/assets/images/topgames/topgames_btn_bg.webp";
 import Slider from "react-slick/lib/slider";
 import "./TopGames.css";
 import { AnimatePresence, motion } from "framer-motion";
+import TopGamesModal from "./TopGamesModal";
 
 const TopGames = () => {
   const slides = [
@@ -105,13 +106,16 @@ const TopGames = () => {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const [modal, setModal] = useState(false);
+
   const handleClick = (i) => {
     nav1.slickGoTo(i);
   };
   return (
     <div className="my-8">
       <div
-        className="container mx-auto bg-no-repeat bg-bottom bg-contain pb-20 overflow-hidden relative"
+        className="contain mx-auto bg-no-repeat bg-bottom bg-contain pb-20 overflow-hidden relative"
         style={{
           backgroundImage: `url(${topgames_bg})`,
         }}
@@ -121,6 +125,7 @@ const TopGames = () => {
           {slides[selectedIndex].buttons.map((button, i) => (
             <AnimatePresence>
               <motion.div
+                onClick={() => setModal(true)}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -135,6 +140,8 @@ const TopGames = () => {
             </AnimatePresence>
           ))}
         </div>
+
+        <TopGamesModal open={modal} onClose={() => setModal(false)} />
 
         <div className="mb-10">
           <SectionHeader

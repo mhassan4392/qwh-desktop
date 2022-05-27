@@ -40,7 +40,7 @@ const ShowcaseSlider = () => {
   };
   return (
     <div>
-      <div className="showcase-slider">
+      <div className="showcase-slider min-w-[1200px]">
         <Slider {...settings}>
           {slides.map((slide, i) => (
             <div key={i}>
