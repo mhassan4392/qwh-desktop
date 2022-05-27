@@ -168,13 +168,14 @@ const TopGames = () => {
                 key={i}
                 className="w-[150px] h-10 flex items-center justify-center rounded-full hover:bg-light hover:bg-opacity-20 cursor-pointer"
               >
-                {selectedIndex != i && (
-                  <img src={button.image1} className="w-14 -ml-3" alt="" />
-                )}
-                {selectedIndex == i && (
-                  <img src={button.image2} className="w-14 -ml-3" alt="" />
-                )}
-                <div className="">{button.title}</div>
+                <img
+                  src={selectedIndex == i ? button.image2 : button.image1}
+                  className="w-14 -ml-3"
+                  alt=""
+                />
+                <div className={`${selectedIndex == i ? "text-white" : ""}`}>
+                  {button.title}
+                </div>
               </div>
             ))}
           </div>

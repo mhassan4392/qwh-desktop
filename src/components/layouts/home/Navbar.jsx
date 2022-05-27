@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { format } from "date-fns";
+import { zonedTimeToUtc, utcToZonedTime, format } from "date-fns-tz";
 import "./Navbar.scss";
 
 import { AiOutlineDownCircle } from "react-icons/ai";
@@ -13,7 +13,9 @@ import NavMenuTwo from "./menus/NavMenuTwo";
 import NavMenuThree from "./menus/NavMenuThree";
 
 const HomeNavbar = () => {
-  const [date, setDate] = useState(format(new Date(), "yyyy-MM-dd HH:mm:ss"));
+  const [date, setDate] = useState(
+    format(zonedTimeToUtc(new Date(), "Asia/Hong_Kong"), "yyyy-MM-dd HH:mm:ss")
+  );
   const [showNavMenu, setShowNavMenu] = useState(false);
   const [nav, setNav] = useState(0);
   const links = [
@@ -32,7 +34,12 @@ const HomeNavbar = () => {
   ];
   useEffect(() => {
     const interval = setInterval(() => {
-      setDate(format(new Date(), "yyyy-MM-dd HH:mm:ss"));
+      setDate(
+        format(
+          zonedTimeToUtc(new Date(), "Asia/Hong_Kong"),
+          "yyyy-MM-dd HH:mm:ss"
+        )
+      );
     }, 1000);
     return () => clearInterval(interval);
   }, []);
