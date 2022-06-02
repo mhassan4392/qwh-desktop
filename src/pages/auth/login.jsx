@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { BiUserCircle } from "react-icons/bi";
+import { ImSpinner3 } from "react-icons/im";
 import {
   AiOutlineUnlock,
   AiOutlineEye,
@@ -7,11 +8,15 @@ import {
 } from "react-icons/ai";
 import { MdOutlineCancel } from "react-icons/md";
 import { IoLanguage } from "react-icons/io5";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 import CodeModal from "./codeModal";
 
 import { useForm } from "react-hook-form";
+
+import login from "../../store/features/auth/login";
+
+import Alert from "../../components/alert/Alert";
+import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -25,6 +30,11 @@ const Login = () => {
   const [time, setTime] = useState(0);
 
   let interval = useRef(null);
+
+  const { loading, error } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const setTimer = () => {
     clearInterval(interval.current);
@@ -55,11 +65,12 @@ const Login = () => {
 
   const { username } = watch();
 
-  const onSubmit = handleSubmit((data) => {
+  const onSubmit = handleSubmit(async (data) => {
     if (!getCode) {
       setGetCode(true);
     } else {
-      console.log(data);
+      data.navigate = navigate;
+      await dispatch(login(data));
     }
   });
 
@@ -70,6 +81,12 @@ const Login = () => {
           <div className="grow py-6 px-4 flex flex-col justify-between">
             <div>
               <form onSubmit={onSubmit}>
+                {/* Error */}
+                <Alert
+                  error={error?.message || ""}
+                  open={error && error.type == "login"}
+                />
+
                 {/* code field */}
                 {getCode && (
                   <div>
@@ -188,11 +205,16 @@ const Login = () => {
                 <div className="my-5">
                   <button
                     disabled={!isValid}
-                    className={`bg-primary w-full py-3 rounded-full ${
-                      !isValid ? "bg-opacity-60" : ""
+                    className={`w-full py-3 rounded-full flex items-center justify-center ${
+                      !isValid
+                        ? "bg-opacity-90 bg-primary-light"
+                        : "bg-primary bg-opacity-80"
                     }`}
                   >
-                    登录
+                    {!loading && loading != "login" && "登录"}
+                    {loading && loading == "login" && (
+                      <ImSpinner3 className="animate-spin text-2xl" />
+                    )}
                   </button>
                 </div>
 
