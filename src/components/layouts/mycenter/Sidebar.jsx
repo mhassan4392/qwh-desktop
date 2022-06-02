@@ -18,9 +18,8 @@ import sidebar_icon_mywallet from "@/assets/images/layouts/mycenter/sidebar_icon
 import sidebar_icon_withdraw_card from "@/assets/images/layouts/mycenter/sidebar_icon_withdraw_card.webp";
 import sidebar_icon_transactionhistory from "@/assets/images/layouts/mycenter/sidebar_icon_transactionhistory.webp";
 import sidebar_icon_bethistory from "@/assets/images/layouts/mycenter/sidebar_icon_bethistory.webp";
-import sidebar_icon_redemptionhistory from "@/assets/images/layouts/mycenter/sidebar_icon_redemptionhistory.webp";
 import sidebar_icon_notice from "@/assets/images/layouts/mycenter/sidebar_icon_notice.webp";
-import sidebar_icon_fedback from "@/assets/images/layouts/mycenter/sidebar_icon_bethistory.webp";
+
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
@@ -79,22 +78,22 @@ const Sidebar = () => {
       to: "/mycenter/betrecord",
     },
     { divider: true },
-    {
-      title: "兑奖记录",
-      image: sidebar_icon_redemptionhistory,
-      to: "/mycenter/giftrecord",
-    },
+    // {
+    //   title: "兑奖记录",
+    //   image: sidebar_icon_redemptionhistory,
+    //   to: "/mycenter/giftrecord",
+    // },
     {
       title: "消息中心",
       image: sidebar_icon_notice,
       to: "/mycenter/mail",
       no: 120,
     },
-    {
-      title: "意见反馈",
-      image: sidebar_icon_fedback,
-      to: "/mycenter/suggestion",
-    },
+    // {
+    //   title: "意见反馈",
+    //   image: sidebar_icon_fedback,
+    //   to: "/mycenter/suggestion",
+    // },
   ];
 
   const location = useLocation();

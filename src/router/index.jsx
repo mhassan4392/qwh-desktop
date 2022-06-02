@@ -8,17 +8,15 @@ import Login from "@/pages/auth/login";
 import Register from "@/pages/auth/register";
 import BetRecord from "@/pages/mycenter/betrecord";
 import CardManage from "@/pages/mycenter/cardmanage";
-import GiftRecord from "@/pages/mycenter/giftrecord";
 import Mail from "@/pages/mycenter/mail";
 import MyVip from "@/pages/mycenter/myvip";
-import Suggestion from "@/pages/mycenter/suggestion";
 import TransRecord from "@/pages/mycenter/transrecord";
 import UserInfo from "@/pages/mycenter/userinfo";
 import Wallet from "@/pages/mycenter/wallet";
 import WelfareCenter from "@/pages/mycenter/welfarecenter";
-import Deposit from "../pages/mycenter/deposit";
-import Transfer from "../pages/mycenter/transfer";
-import Withdrawals from "../pages/mycenter/withdrawals";
+import Deposit from "@/pages/mycenter/deposit";
+import Transfer from "@/pages/mycenter/transfer";
+import Withdrawals from "@/pages/mycenter/withdrawals";
 
 const Router = () => {
   return (
@@ -34,9 +32,7 @@ const Router = () => {
           <Route path="/mycenter/cardmanage" element={<CardManage />} />
           <Route path="/mycenter/transrecord" element={<TransRecord />} />
           <Route path="/mycenter/betrecord" element={<BetRecord />} />
-          <Route path="/mycenter/giftrecord" element={<GiftRecord />} />
           <Route path="/mycenter/mail" element={<Mail />} />
-          <Route path="/mycenter/suggestion" element={<Suggestion />} />
           <Route path="/mycenter/deposit" element={<Deposit />} />
           <Route path="/mycenter/transfer" element={<Transfer />} />
           <Route path="/mycenter/withdrawals" element={<Withdrawals />} />
