@@ -122,8 +122,8 @@ const TopGames = () => {
       >
         {/* slide button */}
         <div className="absolute bottom-24 z-20 left-0 right-0 flex items-center justify-center">
-          {slides[selectedIndex].buttons.map((button, i) => (
-            <AnimatePresence>
+          <AnimatePresence>
+            {slides[selectedIndex].buttons.map((button, i) => (
               <motion.div
                 onClick={() => setModal(true)}
                 initial={{ opacity: 0 }}
@@ -137,8 +137,8 @@ const TopGames = () => {
                 </div>
                 <img src={topgames_btn} className="w-44" alt="" />
               </motion.div>
-            </AnimatePresence>
-          ))}
+            ))}
+          </AnimatePresence>
         </div>
 
         <TopGamesModal open={modal} onClose={() => setModal(false)} />

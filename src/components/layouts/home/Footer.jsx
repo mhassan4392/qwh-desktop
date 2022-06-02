@@ -85,10 +85,9 @@ const Footer = () => {
       <div className="contain mx-auto">
         <div className="flex items-center justify-center footer-top-logos">
           {top_logos.map((logo, i) => (
-            <div className="logo">
-              <img key={i} src={logo} className="w-20 mx-2 top-logo " alt="" />
+            <div key={i} className="logo">
+              <img src={logo} className="w-20 mx-2 top-logo " alt="" />
               <img
-                key={i}
                 src={top_logos_tr[i]}
                 className="w-20 mx-2  top-logo-tr"
                 alt=""
@@ -108,21 +107,9 @@ const Footer = () => {
 
         <div className="flex items-center justify-around w-2/3 mx-auto footer-bottom-logos">
           {bottom_logos.map((logo, i) => (
-            <div className="logo">
-              <img
-                src={logo}
-                key={i}
-                alt=""
-                className="bottom-logo"
-                srcset=""
-              />
-              <img
-                src={bottom_logos_tr[i]}
-                className="bottom-logo-tr"
-                key={i}
-                alt=""
-                srcset=""
-              />
+            <div key={i} className="logo">
+              <img src={logo} alt="" className="bottom-logo" />
+              <img src={bottom_logos_tr[i]} className="bottom-logo-tr" alt="" />
             </div>
           ))}
         </div>
@@ -130,6 +117,7 @@ const Footer = () => {
         <div className="flex items-center justify-center my-5 border-light text-sm">
           {links.map((link, i) => (
             <Link
+              key={i}
               to="/"
               className={` hover:text-white px-4 ${i == 4 ? "" : "border-r"}`}
             >

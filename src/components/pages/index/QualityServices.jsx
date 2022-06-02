@@ -81,8 +81,8 @@ const QualityServices = () => {
         <div>
           <div className="flex items-center justify-between">
             {rounds.map((round, i) => (
-              <div className="flex flex-col items-center space-y-3">
-                <div key={i} className="relative">
+              <div key={i} className="flex flex-col items-center space-y-3">
+                <div className="relative">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-[122px] mb-[7px] transform rotate-180">
                       <CircularProgressbar

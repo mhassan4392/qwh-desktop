@@ -11,6 +11,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import NavMenuTwo from "./menus/NavMenuTwo";
 import NavMenuThree from "./menus/NavMenuThree";
+import UserNavMenu from "./navbar/UserNavMenu";
 
 const HomeNavbar = () => {
   const [date, setDate] = useState(
@@ -23,8 +24,8 @@ const HomeNavbar = () => {
     { title: "体育", to: "/login" },
     { title: "真人", to: "/login" },
     { title: "棋牌", to: "/login" },
-    { title: "电竞", to: "/login" },
-    { title: "彩票", to: "/login" },
+    // { title: "电竞", to: "/login" },
+    // { title: "彩票", to: "/login" },
     { title: "电子", to: "/login" },
     { title: "优惠", to: "/login" },
     { title: "赞助", to: "/login" },
@@ -46,7 +47,7 @@ const HomeNavbar = () => {
 
   return (
     <div>
-      <div className="fixed flex flex-col h-28 left-0 top-0 right-0 shadow-lg overflow-hidden z-30">
+      <div className="fixed flex flex-col h-28 left-0 top-0 right-0 shadow-lg z-30">
         <div>
           <div className="bg-gray-800 text-light text-sm h-8">
             <div className="contain flex items-center justify-end h-full mx-auto">
@@ -59,7 +60,9 @@ const HomeNavbar = () => {
           <div className="contain h-20 mx-auto">
             <div className="flex items-center justify-between h-full">
               <div className="flex items-center space-x-4 h-full">
-                <img src={nav_logo} className="w-36" alt="" />
+                <Link to="/">
+                  <img src={nav_logo} className="w-36" alt="" />
+                </Link>
                 {/* links */}
                 <div className="flex items-center nav-links h-full">
                   {/* link */}
@@ -95,10 +98,13 @@ const HomeNavbar = () => {
                 {/* link menu */}
               </div>
 
-              <Link to="/auth/login" className="flex items-center space-x-2">
-                <img src={nav_profile} className="w-10" alt="" />
-                <span className="text-sm">登录 / 注册</span>
-              </Link>
+              <div>
+                <UserNavMenu />
+                {/* <Link to="/auth/login" className="flex items-center space-x-2">
+                  <img src={nav_profile} className="w-10" alt="" />
+                  <span className="text-sm">登录 / 注册</span>
+                </Link> */}
+              </div>
             </div>
           </div>
         </div>
