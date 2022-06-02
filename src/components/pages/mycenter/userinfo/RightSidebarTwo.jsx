@@ -37,7 +37,7 @@ const RightSidebarTwo = () => {
         <TabsItems className="h-full grow">
           <TabItem
             tab={0}
-            defaultItem
+            defaultTab
             className="h-full flex items-center justify-center overflow-hidden"
           >
             <span className="text-xs text-light text-center">
