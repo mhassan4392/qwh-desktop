@@ -25,3 +25,16 @@
 .error-element {
   @apply text-primary text-xs pl-3 mt-0.5;
 }
+
+[type="text"],
+[type="number"],
+[type="email"] {
+  @apply border-light focus:ring-0 focus:border-primary rounded h-10 placeholder:text-light placeholder:text-xs text-black;
+}
+
+.icon-select-bg {
+  background-image: url("/src/assets/images/icon_select.webp");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: bottom right;
+}

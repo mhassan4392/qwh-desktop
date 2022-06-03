@@ -7,10 +7,10 @@ import personal_icon_mobile_completed from "@/assets/images/pages/mycenter/walle
 const SectionOne = () => {
   const features = [
     { title: "填写基本资料", image: personal_icon_user_unbound },
-    { title: "已绑定手机号码", image: personal_icon_email_unbound },
+    { title: "已绑定手机号码", image: personal_icon_mobile_completed },
     {
       title: "绑定电子邮箱",
-      image: personal_icon_mobile_completed,
+      image: personal_icon_email_unbound,
       completed: true,
     },
     { title: "添加银行卡", image: personal_icon_bank_unbound },

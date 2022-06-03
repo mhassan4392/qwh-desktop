@@ -1,4 +1,10 @@
+import { useState } from "react";
+import EmailModal from "./EmailModal";
+import PhoneModal from "./PhoneModal";
+
 const SectionThree = () => {
+  const [emailModal, setEmailModal] = useState(false);
+  const [phoneModal, setPhoneModal] = useState(false);
   return (
     <div className="p-5 space-y-5">
       <h2>账户安全</h2>
@@ -20,7 +26,10 @@ const SectionThree = () => {
             <div className="text-light">未验证</div>
           </div>
           <div className="basis-1/2">
-            <span className="py-3 px-6 border border-primary rounded text-primary cursor-pointer">
+            <span
+              onClick={() => setEmailModal(true)}
+              className="py-3 px-6 border border-primary rounded text-primary cursor-pointer"
+            >
               验证
             </span>
           </div>
@@ -32,12 +41,18 @@ const SectionThree = () => {
             <div>*******</div>
           </div>
           <div className="basis-1/2">
-            <span className="py-3 px-6 border border-primary rounded text-primary cursor-pointer">
+            <span
+              className="py-3 px-6 border border-primary rounded text-primary cursor-pointer"
+              onClick={() => setPhoneModal(true)}
+            >
               修改
             </span>
           </div>
         </div>
       </div>
+
+      <PhoneModal open={phoneModal} onClose={() => setPhoneModal(false)} />
+      <EmailModal open={emailModal} onClose={() => setEmailModal(false)} />
     </div>
   );
 };

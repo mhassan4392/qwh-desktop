@@ -20,7 +20,8 @@ const BoxCheckboxes = ({
           }}
           className={`border border-light rounded w-28 h-10 px-2 truncate flex items-center justify-center cursor-pointer ${
             v == value
-              ? "border-secondary text-secondary " + boxActiveClass
+              ? "border-secondary text-secondary icon-select-bg " +
+                boxActiveClass
               : ""
           } ${boxClass}`}
         >
