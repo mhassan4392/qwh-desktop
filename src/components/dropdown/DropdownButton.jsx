@@ -15,7 +15,7 @@ const DropdownButton = ({
       onClick={() => setOpen(!open)}
       {...rest}
     >
-      {typeof children == "function" ? children(open) : children}
+      {typeof children == "function" ? children({ isOpen: open }) : children}
     </As>
   );
 };

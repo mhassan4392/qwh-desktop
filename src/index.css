@@ -38,3 +38,11 @@
   background-size: 15px;
   background-position: bottom right;
 }
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary bg-opacity-25;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
