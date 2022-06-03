@@ -124,7 +124,7 @@ const PhoneModal = ({ open, onClose }) => {
                 onClick={() => {
                   if (digits.length == 4) {
                     setDigits("");
-                    onClose();
+                    setGetCode(false);
                   }
                 }}
                 disabled={digits.length != 4}
