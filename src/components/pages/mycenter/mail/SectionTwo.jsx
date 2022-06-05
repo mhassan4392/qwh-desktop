@@ -24,7 +24,7 @@ const SectionTwo = ({ tab, setMessage }) => {
                   <span className="shrink-0">
                     <input
                       type="checkbox"
-                      className="rounded-full border-light focus:ring-0 outline-none text-secondary"
+                      className="rounded-full border-light focus:ring-0 outline-none text-secondary cursor-pointer"
                       name=""
                       id=""
                     />

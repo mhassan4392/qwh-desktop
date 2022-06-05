@@ -21,7 +21,7 @@ const MailMessage = ({ options, setMessage, ...rest }) => {
             <input
               ref={inputRef}
               type="checkbox"
-              className="rounded-full mr-3 border-light focus:ring-0 outline-none text-secondary"
+              className="rounded-full mr-3 border-light focus:ring-0 outline-none text-secondary cursor-pointer"
               name=""
               id=""
             />
