@@ -5,6 +5,7 @@ const SectionTwo = () => {
   const [text, setText] = useState("");
   const boxValues = ["男", "女"];
   const [gender, setGender] = useState("男");
+
   return (
     <div className="p-5">
       <h2 className="mb-5">基本资料</h2>

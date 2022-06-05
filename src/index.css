@@ -29,7 +29,7 @@
 [type="text"],
 [type="number"],
 [type="email"] {
-  @apply border-light focus:ring-0 focus:border-primary rounded h-10 placeholder:text-light placeholder:text-xs text-black;
+  @apply border-light focus:ring-0 focus:border-primary hover:border-primary transition-all duration-300 rounded h-10 placeholder:text-light placeholder:text-xs text-black;
 }
 
 .icon-select-bg {

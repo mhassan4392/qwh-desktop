@@ -8,10 +8,12 @@ import {
 import { useState } from "react";
 
 import common_img_nodate from "@/assets/images/pages/mycenter/common_img_nodate.webp";
+import CardModal from "./CardModal";
 
 const TabsSection = () => {
   const tabs = ["银行卡", "虚拟币", "EBpay"];
   const [activeTab, setActiveTab] = useState(0);
+  const [modal, setModal] = useState(false);
   return (
     <div className="p-4 space-y-5 flex flex-col h-full overflow-hidden">
       <div className="flex items-center space-x-4">
@@ -59,7 +61,10 @@ const TabsSection = () => {
                   {activeTab == 1 && "暂无绑定虚拟币地址"}
                   {activeTab == 2 && "暂无绑定EBpay地址"}
                 </p>
-                <button className="w-64 bg-gradient-to-r from-primary-light to-primary text-white py-2 rounded text-sm">
+                <button
+                  onClick={() => setModal(true)}
+                  className="w-64 bg-gradient-to-r from-primary-light to-primary text-white py-2 rounded text-sm"
+                >
                   {activeTab == 0 && "添加银行卡"}
                   {activeTab == 1 && "添加虚拟币地址"}
                   {activeTab == 2 && "添加EBpay地址"}
@@ -69,6 +74,8 @@ const TabsSection = () => {
           ))}
         </TabsItems>
       </Tabs>
+
+      <CardModal open={modal} onClose={() => setModal(false)} />
     </div>
   );
 };

@@ -16,12 +16,16 @@ import store from "@/store/app";
 
 import { HashRouter, BrowserRouter } from "react-router-dom";
 
+import { CookiesProvider } from "react-cookie";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <CookiesProvider>
     <HashRouter>
       <Provider store={store}>
         <App />
       </Provider>
     </HashRouter>
-  </React.StrictMode>
+  </CookiesProvider>
+  // </React.StrictMode>
 );

@@ -9,7 +9,7 @@ import {
 import { MdOutlineCancel } from "react-icons/md";
 import { IoLanguage } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
-import CodeModal from "./codeModal";
+import CodeModal from "../../components/pages/auth/CodeModal";
 
 import { useForm } from "react-hook-form";
 

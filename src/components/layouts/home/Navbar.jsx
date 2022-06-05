@@ -100,10 +100,24 @@ const HomeNavbar = () => {
 
               <div>
                 <UserNavMenu />
-                {/* <Link to="/auth/login" className="flex items-center space-x-2">
+                {/* <div to="/auth/login" className="flex items-center space-x-2">
                   <img src={nav_profile} className="w-10" alt="" />
-                  <span className="text-sm">登录 / 注册</span>
-                </Link> */}
+                  <span className="text-sm">
+                    <Link
+                      className="hover:text-primary transition-all duration-300"
+                      to="/auth/login"
+                    >
+                      登录
+                    </Link>
+                    &nbsp; / &nbsp;
+                    <Link
+                      className="hover:text-primary transition-all duration-300"
+                      to="/auth/register"
+                    >
+                      注册
+                    </Link>
+                  </span>
+                </div> */}
               </div>
             </div>
           </div>
