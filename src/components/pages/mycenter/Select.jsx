@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dropdown } from "@/components/dropdown";
 
 import { BsChevronDown } from "react-icons/bs";
 
-const Select = ({ defaultValue = "", values = [], onchange = () => {} }) => {
+const Select = ({
+  defaultValue = "",
+  values = [],
+  onchange = () => {},
+  className = "",
+}) => {
   const [select, setSelect] = useState(defaultValue);
+
+  useEffect(() => {
+    setSelect(defaultValue);
+    onchange(defaultValue);
+  }, [defaultValue]);
   return (
     <Dropdown>
-      <Dropdown.Button>
+      <Dropdown.Button className={className}>
         {({ isOpen }) => (
           <div
             className={`flex items-center justify-between h-10 p-2 border rounded-lg w-64 hover:border-secondary transition-all duration-300 ${
