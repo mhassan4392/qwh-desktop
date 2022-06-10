@@ -5,9 +5,9 @@ import TabsSection from "../../components/pages/mycenter/transfer/TabsSection";
 const Transfer = () => {
   const [tabIndex, setTabIndex] = useState(0);
   return (
-    <div className="rounded h-full flex gap-5">
-      <div className="rounded basis-4/5 gap-5 flex flex-col">
-        <div className="bg-white rounded grow">
+    <div className="h-full flex gap-5">
+      <div className="basis-4/5 gap-5 flex flex-col">
+        <div className="bg-white rounded-lg grow">
           <TabsSection setTabIndex={setTabIndex} />
         </div>
       </div>

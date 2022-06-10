@@ -17,7 +17,7 @@ import sidebar_icon_transactionhistory from "@/assets/images/layouts/mycenter/si
 import sidebar_icon_bethistory from "@/assets/images/layouts/mycenter/sidebar_icon_bethistory.webp";
 import sidebar_icon_notice from "@/assets/images/layouts/mycenter/sidebar_icon_notice.webp";
 
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { IoChevronDownCircleOutline } from "react-icons/io5";
 
 import "./UserNavMenu.css";
@@ -85,7 +85,7 @@ const UserNavMenu = () => {
     <div className="flex items-center space-x-2">
       <div className="flex items-center text-xs">
         {links.map((link, i) => (
-          <Link
+          <NavLink
             key={i}
             to={link.to}
             className={`flex flex-col px-2.5 space-y-1 transition-colors duration-300 hover:text-primary ${
@@ -102,13 +102,17 @@ const UserNavMenu = () => {
               setLinks(newLinks);
             }}
           >
-            <img
-              src={link.hover ? link.hoverImage : link.image}
-              className="w-6"
-              alt=""
-            />
-            <span className="text-xs">{link.title}</span>
-          </Link>
+            {({ isActive }) => (
+              <>
+                <img
+                  src={link.hover || isActive ? link.hoverImage : link.image}
+                  className="w-6"
+                  alt=""
+                />
+                <span className="text-xs">{link.title}</span>
+              </>
+            )}
+          </NavLink>
         ))}
       </div>
 
@@ -118,7 +122,8 @@ const UserNavMenu = () => {
             to="/mycenter/wallet"
             className="flex items-center space-x-2 text-xs user-nav-menu hover:text-primary transition-all duration-300"
           >
-            <div>
+            <div className="relative">
+              <span className="w-2 h-2 bg-primary rounded-full absolute right-0"></span>
               <img src={profile} className="w-10" alt="" />
             </div>
             <div>

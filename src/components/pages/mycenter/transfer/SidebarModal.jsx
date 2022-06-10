@@ -3,7 +3,6 @@ import { VscChromeClose } from "react-icons/vsc";
 import { BsInfoLg } from "react-icons/bs";
 
 const SidebarModal = ({ open, onClose, children, header }) => {
-  console.log(children);
   return (
     <Modal
       open={open}

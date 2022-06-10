@@ -6,11 +6,18 @@ import SidebarModal from "./SidebarModal";
 const RightSidebarTwo = () => {
   const [modal, setModal] = useState(false);
   const modals = [
-    "怎么转账？",
-    "开启自动转账后怎么取款？",
-    "转账到游戏，金额变少？",
-    "转账没有成功，但是钱却没了怎么办？",
-    "中心钱包，转游戏钱包失败？",
+    "怎么取款？",
+    "可以使用别人的银行卡进行取款吗？",
+    "申请取款需要注意些什么？",
+    "游戏账户里有钱为什么无法取款？",
+    "会员可以绑定多张银行卡吗？",
+    "取款为什么还需要审核？",
+    "取款要求（例：流水）",
+    "我的流水还差多少？",
+    "取款支持的银行",
+    "取款输入金额无法提交申请？",
+    "取款到账时间",
+    "取款未到账，怎么办？",
   ];
   return (
     <div className="p-3 flex flex-col h-full">

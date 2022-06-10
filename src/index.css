@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .contain {
-  @apply !w-[1200px] sm:!w-[1200px] md:!w-[1200px] lg:!w-[1200px];
+  @apply !w-[1300px] sm:!w-[1300px] md:!w-[1300px] lg:!w-[1300px];
 }
 
 .input-control {

@@ -3,7 +3,7 @@ import Sidebar from "../components/layouts/mycenter/Sidebar";
 
 const MyCenterLayout = () => {
   return (
-    <div className="mt-10 mb-5 flex gap-5 w-[1100px] overflow-hidden mx-auto">
+    <div className="mt-10 mb-5 flex gap-5 w-[1200px] overflow-hidden mx-auto">
       <div className="bg-white rounded basis-1/5 shrink-0">
         <Sidebar />
       </div>

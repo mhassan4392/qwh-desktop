@@ -3,9 +3,9 @@ import RightSidebarTwo from "../../components/pages/mycenter/cardmanage/RightSid
 import TabsSection from "../../components/pages/mycenter/cardmanage/TabsSection";
 const CardManage = () => {
   return (
-    <div className="rounded h-full flex gap-5">
-      <div className="rounded basis-4/5 gap-5 flex flex-col">
-        <div className="bg-white rounded grow">
+    <div className="h-full flex gap-5">
+      <div className="basis-4/5 gap-5 flex flex-col">
+        <div className="bg-white rounded-lg grow">
           <TabsSection />
         </div>
       </div>

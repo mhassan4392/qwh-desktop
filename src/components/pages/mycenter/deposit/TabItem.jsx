@@ -26,7 +26,8 @@ const TabOne = () => {
   return (
     <div>
       <Tabs defaultTab={0}>
-        <TabsButtons className="grid grid-cols-5 gap-3 px-4 bg-white items-center text-xs pt-3 pb-5 justify-center cursor-pointer overflow-hidden">
+        <div className="mt-5 ml-4 text-sm">支付方式</div>
+        <TabsButtons className="grid grid-cols-5 gap-3 px-4 bg-white items-center text-xs pt-1 pb-8 justify-center cursor-pointer overflow-hidden">
           {tabs.map((tab, i) => (
             <TabButton
               className="text-xs flex flex-col h-20 rounded-lg items-center justify-center border space-y-1"

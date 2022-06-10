@@ -40,7 +40,7 @@ const NestedTabItem = ({ i, ...rest }) => {
           </div>
 
           <div className="space-y-1">
-            <p>存款人姓名</p>
+            <p className="text-sm">存款人姓名</p>
             <input
               {...register("text", { required: true })}
               type="text"
@@ -53,13 +53,13 @@ const NestedTabItem = ({ i, ...rest }) => {
           </div>
 
           <div className="space-y-1">
-            <p>存款人姓名</p>
+            <p className="text-sm">存款人姓名</p>
             <div className="relative w-96">
               <span className="absolute right-3 top-1.5">元</span>
               <input
                 {...register("amount", { required: true })}
                 type="number"
-                className="w-full pr-10 !text-bold"
+                className="w-full pr-10 !font-semibold !text-lg"
                 placeholder="请输入100-5000"
               />
             </div>

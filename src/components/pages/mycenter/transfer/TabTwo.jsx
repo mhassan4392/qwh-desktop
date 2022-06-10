@@ -138,7 +138,10 @@ const TabTwo = () => {
       </div>
       <div className="grid grid-cols-3 gap-5 my-16">
         {features.map((f, i) => (
-          <div className="flex items-center justify-between bg-common-bg rounded py-5 px-3">
+          <div
+            key={i}
+            className="flex items-center justify-between bg-common-bg rounded py-5 px-3"
+          >
             <div className="space-y-2">
               <h3 className="truncate font-medium">{f.title}</h3>
               <p className="truncate text-light text-xs">{f.subtitle}</p>

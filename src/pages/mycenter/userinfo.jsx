@@ -5,15 +5,15 @@ import SectionThree from "../../components/pages/mycenter/userinfo/SectionThree"
 import SectionTwo from "../../components/pages/mycenter/userinfo/SectionTwo";
 const UserInfo = () => {
   return (
-    <div className="rounded h-full flex gap-5">
-      <div className="rounded basis-4/5 gap-5 flex flex-col">
-        <div className="bg-white rounded">
+    <div className="h-full flex gap-5">
+      <div className="basis-4/5 gap-5 flex flex-col">
+        <div className="bg-white rounded-lg">
           <SectionOne />
         </div>
-        <div className="bg-white rounded">
+        <div className="bg-white rounded-lg">
           <SectionTwo />
         </div>
-        <div className="bg-white rounded grow">
+        <div className="bg-white rounded-lg grow">
           <SectionThree />
         </div>
       </div>

@@ -14,7 +14,7 @@ const DepositCard = () => {
         <div className="flex items-center justify-between">
           {["选择冷钱包", "选择协议", "输入充币数量", "完成充币"].map(
             (value, i) => (
-              <div className="relative">
+              <div key={i} className="relative">
                 <span
                   className="absolute inset-0 flex items-center justify-center text-xs"
                   key={i}

@@ -9,32 +9,30 @@ import { useState } from "react";
 
 import { AiFillQuestionCircle } from "react-icons/ai";
 
-import common_img_nodate from "@/assets/images/pages/mycenter/common_img_nodate.webp";
-import TabOne from "./TabItem";
-import TabItemTwo from "./TabItemTwo";
+import TabOne from "./TabOne";
+import TabTwo from "./TabTwo";
 
 const TabsSection = ({ setTabIndex }) => {
-  const tabs = ["存入中心钱包", "存入虚拟币钱包"];
+  const tabs = ["中心钱包取款", "虚拟币钱包提币"];
   const [activeTab, setActiveTab] = useState(0);
   return (
     <div className="p-4 space-y-5 flex flex-col h-full overflow-hidden">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <h2 className="font-semibold">
-            {activeTab == 0 && "存款"}
-            {activeTab == 1 && "充币"}
+            {activeTab == 0 && "取款"}
+            {activeTab == 1 && "提币"}
           </h2>
           <p className="text-sm text-light">
-            {activeTab == 0 && "存款金额会存入中心钱包"}
-            {activeTab == 1 && "USDT会存入虚拟币钱包"}
+            {activeTab == 0 && "若长时间未到账，请联系在线客服核查"}
+            {activeTab == 1 && "若长时间未到账，请联系在线客服核查"}
           </p>
         </div>
-        <div className="flex items-center space-x-2 cursor-pointer">
+        {/* <div className="flex items-center space-x-2 cursor-pointer">
           <AiFillQuestionCircle className="text-secondary" />
           <p className="text-xs">存款教程</p>
-        </div>
+        </div> */}
       </div>
-
       <Tabs className="grow h-full flex flex-col overflow-hidden">
         <TabsButtons className="flex items-center border-b">
           {tabs.map((tab, i) => (
@@ -69,7 +67,7 @@ const TabsSection = ({ setTabIndex }) => {
               className="h-full overflow-hidden"
             >
               {activeTab == 0 && <TabOne />}
-              {activeTab == 1 && <TabItemTwo />}
+              {activeTab == 1 && <TabTwo />}
             </TabItem>
           ))}
         </TabsItems>
