@@ -1,0 +1,39 @@
+.slick-arrow {
+  @apply !block !text-light hover:!text-opacity-50 !text-3xl !w-20 !h-20;
+}
+
+.vip-slider .slick-prev {
+  @apply !left-0 z-10;
+}
+
+.vip-slider .slick-next {
+  @apply !right-0;
+}
+
+.vip-slider .slick-dots {
+  bottom: 20px;
+  border-radius: 10px;
+}
+
+.vip-slider .slick-dots li {
+  margin: 0 10px !important;
+}
+
+.vip-slider .slick-dots li.slick-active button::before {
+  background-image: url("/src/assets/images/slider_indicator_hover.webp");
+}
+
+.vip-slider .slick-dots li:hover button::before {
+  background-image: url("/src/assets/images/slider_indicator_hover.webp");
+}
+
+.vip-slider .slick-dots li button::before {
+  content: "";
+  opacity: 1 !important;
+  width: 20px;
+  height: 20px;
+  background-image: url("/src/assets/images/slider_indicator.webp");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}

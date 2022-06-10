@@ -1,0 +1,53 @@
+.vip-table td {
+  @apply !h-12;
+}
+
+.vip-table thead td {
+  @apply !h-16;
+}
+/* 
+.vip-table thead tr {
+  @apply !bg-gray-100;
+} */
+
+.vip-table tbody tr:nth-child(odd) {
+  @apply !bg-light-bg bg-opacity-25;
+}
+
+.vip-table tbody tr:nth-child(even) {
+  @apply !bg-common-bg;
+}
+
+.vip-third-table tbody {
+  display: block;
+  height: 200px;
+  overflow: auto;
+}
+.vip-third-table thead,
+.vip-third-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* even columns width , fix width of table too*/
+}
+.vip-third-table thead {
+  width: calc(
+    100% - 1em
+  ); /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.modal-table tbody {
+  display: block;
+  height: 400px;
+  overflow: auto;
+}
+.modal-table thead,
+.modal-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* even columns width , fix width of table too*/
+}
+.modal-table thead {
+  width: calc(
+    100% - 1em
+  ); /* scrollbar is average 1em/16px width, remove it from thead width */
+}
