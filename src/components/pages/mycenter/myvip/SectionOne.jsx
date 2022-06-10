@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import vip_medal from "@/assets/images/pages/mycenter/myvip/vip_medal.webp";
 import vip_img_vip_select from "@/assets/images/pages/mycenter/myvip/vip_img_vip_select.svg";
 import { Link } from "react-router-dom";
@@ -5,6 +7,7 @@ import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 const SectionOne = ({ vip, setVip }) => {
+  const [width, setWidth] = useState(0);
   return (
     <div>
       <div className="flex items-center justify-between">
@@ -24,14 +27,16 @@ const SectionOne = ({ vip, setVip }) => {
         </Link>
       </div>
 
-      <div
-        className="flex items-center justify-between mx-8 rounded-lg mt-10"
-        onClick={(e) => console.log(e.target.clientWidth)}
-      >
+      <div className="flex items-center justify-between mx-8 rounded-lg mt-10 relative bg-[#ebedf0]">
+        <div
+          className="absolute top-0 left-0 bottom-0 bg-gradient-to-r from-primary-light to-primary rounded-lg transition-all duration-300"
+          style={{ width: width + "px" }}
+        ></div>
         {Array.from({ length: 10 }).map((_, i) => (
           <div
-            className={`grow border-r border-white relative h-3 ${
-              vip >= i + 1 ? "bg-primary" : "bg-[#ebedf0]"
+            key={i}
+            className={`grow border-r bg-transparent border-white relative h-3 ${
+              vip >= i + 1 ? "" : ""
             } ${i == 0 ? "!rounded-l-lg" : ""} ${
               i == 9 ? "!rounded-r-lg" : ""
             }`}
@@ -41,7 +46,10 @@ const SectionOne = ({ vip, setVip }) => {
                 className={`absolute -left-5 -top-11 w-10 h-10 text-xs  rounded-full flex items-center justify-center cursor-pointer ${
                   vip == 0 ? "text-white" : ""
                 }`}
-                onClick={() => setVip(0)}
+                onClick={() => {
+                  setVip(0);
+                  setWidth(0);
+                }}
               >
                 <AnimatePresence>
                   {vip == 0 && (
@@ -62,7 +70,16 @@ const SectionOne = ({ vip, setVip }) => {
               className={`absolute -right-5 -top-11 w-10 h-10 text-xs rounded-full flex items-center justify-center cursor-pointer ${
                 vip == i + 1 ? " text-white" : ""
               }`}
-              onClick={() => setVip(i + 1)}
+              onClick={(e) => {
+                setVip(i + 1);
+                let w;
+                if (e.target.classList.contains("vip-content")) {
+                  w = e.target.parentElement.parentElement;
+                } else {
+                  w = e.target.parentElement;
+                }
+                setWidth((w.clientWidth + 0.5) * (i + 1));
+              }}
             >
               <AnimatePresence>
                 {vip == i + 1 && (
@@ -76,7 +93,9 @@ const SectionOne = ({ vip, setVip }) => {
                   />
                 )}
               </AnimatePresence>
-              <span className="absolute text-xs -mt-1">VIP{i + 1}</span>
+              <span className="absolute text-xs -mt-1 vip-content">
+                VIP{i + 1}
+              </span>
             </span>
           </div>
         ))}

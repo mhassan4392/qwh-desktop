@@ -23,7 +23,10 @@ const SectionTwo = ({ vip = 0 }) => {
       </h2>
       <div className="grid grid-cols-5 gap-5">
         {features.map((f, i) => (
-          <div className="flex flex-col items-center justify-center space-y-2">
+          <div
+            key={i}
+            className="flex flex-col items-center justify-center space-y-2"
+          >
             <img src={f.image} className="w-16" alt="" />
             <h2 className="text-xl font-medium">{f.no}</h2>
             <p className="text-sm text-gray-500">{f.title}</p>
