@@ -8,6 +8,7 @@ const Select = ({
   values = [],
   onchange = () => {},
   className = "",
+  disabled = false,
 }) => {
   const [select, setSelect] = useState(defaultValue);
 
@@ -16,40 +17,46 @@ const Select = ({
     onchange(defaultValue);
   }, [defaultValue]);
   return (
-    <Dropdown>
-      <Dropdown.Button className={className}>
-        {({ isOpen }) => (
-          <div
-            className={`flex items-center justify-between h-10 p-2 border rounded-lg w-64 hover:border-secondary transition-all duration-300 ${
-              isOpen ? "border-secondary" : ""
-            }`}
-          >
-            <span>{select}</span>
-            <BsChevronDown
-              className={`transform transition-all duration-300 ${
-                isOpen ? "rotate-180" : ""
+    <>
+      <Dropdown>
+        <Dropdown.Button className={className}>
+          {({ isOpen }) => (
+            <div
+              className={`flex items-center justify-between h-10 p-2 border rounded-lg w-64 hover:border-secondary transition-all duration-300 relative ${
+                isOpen ? "border-secondary" : ""
               }`}
-            />
-          </div>
-        )}
-      </Dropdown.Button>
-      <Dropdown.Menu className="w-64 py-2 max-h-64 overflow-y-auto">
-        {values.map((value, i) => (
-          <Dropdown.MenuItem
-            onClick={() => {
-              setSelect(value);
-              onchange(value);
-            }}
-            key={i}
-            className={`${
-              select == value ? "bg-gray-100" : "bg-white"
-            } shadow-none hover:bg-gray-100 hover:text-black text-sm`}
-          >
-            {value}
-          </Dropdown.MenuItem>
-        ))}
-      </Dropdown.Menu>
-    </Dropdown>
+            >
+              <span>{select}</span>
+              <BsChevronDown
+                className={`transform transition-all duration-300 ${
+                  isOpen ? "rotate-180" : ""
+                }`}
+              />
+
+              {disabled && (
+                <div className="absolute inset-0 bg-white z-50 bg-opacity-5"></div>
+              )}
+            </div>
+          )}
+        </Dropdown.Button>
+        <Dropdown.Menu className="w-64 py-2 max-h-64 overflow-y-auto">
+          {values.map((value, i) => (
+            <Dropdown.MenuItem
+              onClick={() => {
+                setSelect(value);
+                onchange(value);
+              }}
+              key={i}
+              className={`${
+                select == value ? "bg-gray-100" : "bg-white"
+              } shadow-none hover:bg-gray-100 hover:text-black text-sm`}
+            >
+              {value}
+            </Dropdown.MenuItem>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </>
   );
 };
 

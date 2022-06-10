@@ -1,6 +1,3 @@
-import common_icon_welfareCenter_pending from "@/assets/images/pages/mycenter/welfarecenter/common_icon_welfareCenter_pending.webp";
-import common_icon_welfareCenter_distributed from "@/assets/images/pages/mycenter/welfarecenter/common_icon_welfareCenter_distributed.webp";
-
 import { useState } from "react";
 
 import DateRange from "../DateRange";

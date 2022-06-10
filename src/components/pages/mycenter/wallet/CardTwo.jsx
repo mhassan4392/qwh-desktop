@@ -1,7 +1,4 @@
-import { useState } from "react";
-
-import { AiOutlineWallet } from "react-icons/ai";
-import { BsArrowClockwise, BsChevronDoubleDown } from "react-icons/bs";
+import { BsArrowClockwise } from "react-icons/bs";
 
 import { Link } from "react-router-dom";
 

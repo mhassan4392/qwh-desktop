@@ -25,7 +25,7 @@ const HomeNavbar = () => {
     { title: "真人", to: "/login" },
     { title: "棋牌", to: "/login" },
     { title: "电竞", to: "/login" },
-    { title: "彩票", to: "/login" },
+    // { title: "彩票", to: "/login" },
     { title: "电子", to: "/login" },
     { title: "优惠", to: "/login" },
     { title: "赞助", to: "/login" },

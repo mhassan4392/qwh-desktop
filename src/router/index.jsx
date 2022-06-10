@@ -17,6 +17,7 @@ import WelfareCenter from "@/pages/mycenter/welfarecenter";
 import Deposit from "@/pages/mycenter/deposit";
 import Transfer from "@/pages/mycenter/transfer";
 import Withdrawals from "@/pages/mycenter/withdrawals";
+import VipDetail from "@/pages/mycenter/vipdetail";
 
 const Router = () => {
   return (
@@ -28,6 +29,7 @@ const Router = () => {
           <Route path="/mycenter/wallet" element={<Wallet />} />
           <Route path="/mycenter/userinfo" element={<UserInfo />} />
           <Route path="/mycenter/myvip" element={<MyVip />} />
+          <Route path="/mycenter/myvip/vipdetail" element={<VipDetail />} />
           <Route path="/mycenter/welfarecenter" element={<WelfareCenter />} />
           <Route path="/mycenter/cardmanage" element={<CardManage />} />
           <Route path="/mycenter/transrecord" element={<TransRecord />} />
